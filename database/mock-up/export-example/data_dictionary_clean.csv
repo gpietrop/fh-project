@@ -1,0 +1,571 @@
+Id,Référence,Saisie,Type,Format,Intitulé
+ID102S2V9,PROJECTNAME,O,Label,,FH-Early
+V5,SEX,O,Radio buttons,"1 = Male 
+2 = Female",Gender
+ID102S2V10,BRTHDAT,O,Date,"Précision = MM/YYYY
+Valeurs par défaut = 01/01/----",Date of birth
+ID102S2V11,AGE,O,Entier,"Taille : N
+Min = 18
+Max = 120",Age
+ID102S2V15,INVNAME,O,Texte,Taille : N,Investigator
+ID102S2V12,SITEID,O,Texte,Taille : N,Centre
+ID102S2V14,SUBJECT_REF,O,Texte,Taille : N,Patient ID
+ID102S2V16,RFICDAT,O,Date,"Précision = JJ/MM/YYYY
+Valeurs par défaut = 01/01/---- 
+Min = Variable : MEPDT
+Max = Date courante",Date of inclusion
+ID102S2V18,INF1YN,O,Radio buttons,"1 = Yes 
+0 = No",Patient deceased at the time of inclusion
+ID102S2V19,INF1AYN,O,Radio buttons,"1 = Yes 
+0 = No","If so, did you verify that there was no objection tothe processing of personal data during his lifetime (ORBIS or other)?"
+ID102S2V20,INF1BYN,O,Radio buttons,"1 = Yes 
+0 = No","If not, has the patient been seen in the department after January 1, 2021?"
+ID102S2V21,INF1B1LS,O,Radio buttons,"1 = Information provided during a consultation 
+2 = Sent by mail with the NINO",Information procedures
+ID102S2V22,INF1B2DT,O,Date,"Précision = JJ/MM/YYYY
+Valeurs par défaut = 01/01/---- 
+Max = Variable : RFICDAT",Date of information
+ID102S2V182,INF1B5DT,O,Date,"Précision = JJ/MM/YYYY
+Valeurs par défaut = 01/01/---- 
+Min = Variable : INF1B2DT
+Max = Date courante","Date of inclusion (i.e., date of collection of the non-objection)"
+ID102S2V24,INF1B3DT,O,Date,"Précision = JJ/MM/YYYY
+Valeurs par défaut = 01/01/---- 
+Max = Variable : RFINSTMOINS1MOISDT",Date of sending of the NINO (note d'information et non-opposition)
+ID102S2V25,INF1B4DT,O,Date,"Précision = JJ/MM/YYYY
+Valeurs par défaut = 01/01/---- 
+Min = Variable : BRTHDAT
+Max = Variable : RFICDAT","Date of inclusion (i.e., one month after the date the NINO was sent and in the absence of opposition from the patient)"
+ID102S2V27,INF1B5NUM,O,Réel,"Format : ##,#",Version of NINO sent/delivered
+ID102S2V34,INF1A1MESS,O,Label,,Exclusion criteria n°1 violated
+ID102S2V205,CBCZ1AYN,O,Radio buttons,"1 = Yes 
+0 = No",Agreement for the re-use of the biocollection for constitutionalgenetic analysis - retrospective patients
+ID102S2V204,CBCZ1YN,O,Radio buttons,"1 = Yes 
+0 = No",Agreement for both entry into the FH patient registryand the anonymous use of data for researchpurposes - retrospective patients
+ID102S2V28,CB1YN,O,Radio buttons,"1 = Yes 
+0 = No",« Consentement pour l'examendes caractéristiques génétiques à des fins médicales »form collected during routine care signed ?
+ID102S2V29,CB2DT,O,Date,"Précision = JJ/MM/YYYY
+Valeurs par défaut = 01/01/---- 
+Max = Variable : RFICDAT",Date of signature of consent
+ID102S2V187,CB3DT,O,Date,"Précision = JJ/MM/YYYY
+Valeurs par défaut = 01/01/---- 
+Max = Variable : RFICDAT",Date of consent signature - prospective patients
+ID102S2V188,CB4YN,O,Radio buttons,"1 = Yes 
+0 = No",Agreement for the re-use of the biocollection for constitutional genetic analysis - retrospective patients
+ID102S2V189,CB5YN,O,Radio buttons,"1 = Yes 
+0 = No",Agreement for both entry into the FH patient registry and the anonymous use of data for research purposes - retrospective patients
+ID102S2V192,CB1A1MESS,O,Label,,Inclusion criteria n°3 violated
+ID102S2V206,CSTPT1DT,O,Date,"Précision = JJ/MM/YYYY
+Valeurs par défaut = 01/01/---- 
+Min = Variable : BRTHDAT
+Max = Variable : RFICDAT",Date of consent signature
+ID102S2V207,CSTTR1YN,O,Radio buttons,"1 = Yes 
+0 = No",Agreement for both entry into the FH patient registryand the anonymous use of data for research purposes - retrospective patients
+ID102S2V208,CSTTR1AYN,O,Radio buttons,"1 = Yes 
+0 = No",Agreement for the re-use of the biocollection forconstitutional genetic analysis - retrospective patients
+ID102S2V197,CICZ1YN,O,Radio buttons,"1 = Yes 
+0 = No",Patient suspected or confirmed for FH
+ID102S2V30,CIFR1YN,O,Radio buttons,"1 = Yes 
+0 = No",1. Patients treated at the centre from 01/01/2015
+ID102S2V31,CIFR2YN,O,Radio buttons,"1 = Yes 
+0 = No",2. Patient suspected or confirmed for FH
+ID102S2V32,CIFR3YN,O,Radio buttons,"1 = Yes 
+0 = No","3.Consent obtained from the adult patient or legal guardian for adults under guardianshipor from one of the legal representatives of minorpatients, for the storage and reuse of the biobank,including for constitutional genetic analysesfor the purpose of “searching for a geneticorigin for the disease (etiological diagnosis)”or to “propose a predictive diagnosis” duringroutine clinical care."
+ID102S2V33,CNIFR1YN,O,Radio buttons,"0 = No 
+1 = Yes",1. Objection to data collection expressed by adult patientsor the legal guardian for adults under guardianshipor the legal representatives of minor patients(or for deceased patients: objection expressed tothe use of their data during their lifetime).
+ID102S2V209,CIPT1YN,O,Radio buttons,"1 = Yes 
+0 = No",Patients included in the Portuguese FH Study
+ID102S2V210,CIPT2YN,O,Radio buttons,"1 = Yes 
+0 = No",Patient suspected or confirmed for FH.
+ID102S2V211,CITR1YN,O,Radio buttons,"1 = Yes 
+0 = No",Patient suspected or confirmed for FH (Simon Broome Criteria used)
+ID102S2V212,CITR2YN,O,Radio buttons,"1 = Yes 
+0 = No",Ability to provide informed consent
+ID102S2V200,PIMESS,O,Label,,All Eligibility criteria are satisfyed. Click Inclusion to include the patient.
+ID102S2V35,CD1TXT,O,Texte,Taille : 12,Family number
+ID102S2V201,CD1AMESS,O,Label,,"Family number must be in the format ###-F-####(Center number-F-Family number  (sequential number assigned by the center that is specific to the study and different  from the number used in routine care). For example, for the first family numbered in France: 002-F-0001.Please keep a correspondence list of patients and familiesat your center in a secure area with limited access."
+ID102S2V213,CD1BMESS,O,Label,,"Family number must be in the format ###-F-####(Center number-F-Family number  (sequential number assigned by the center that is specific to the study and different  from the number used in routine care). For example, for the first family numbered in Czech Republic : 001-F-0001.Please keep a correspondence list of patients and familiesat your center in a secure area with limited access."
+ID102S2V214,CD1CMESS,O,Label,,"Family number must be in the format ###-F-####(Center number-F-Family number  (sequential number assigned by the center that is specific to the study and different  from the number used in routine care). For example, for the first family numbered in Portugal: 003-F-0001.Please keep a correspondence list of patients and familiesat your center in a secure area with limited access."
+ID102S2V215,CD1DMESS,O,Label,,"Family number must be in the format ###-F-####(Center number-F-Family number  (sequential number assigned by the center that is specific to the study and different  from the number used in routine care). For example, for the first family numbered in Türkiye : 004-F-0001.Please keep a correspondence list of patients and familiesat your center in a secure area with limited access."
+ID102S2V36,CD2LS,O,Radio buttons,"1 = Index case 
+2 = Relative",Index case/Relative
+ID102S2V37,CD3NUM,O,Réel,"Format : ###,N
+Min = 30.0
+Max = 150.0
+Unité = kg",Weight
+ID102S2V38,CD4NUM,O,Réel,"Format : ###,###
+Min = 100.0
+Max = 210.0
+Unité = cm",Height
+ID102S2V39,CD5NUM,O,Réel,"Format : ###,#
+Unité = Kg/m²",BMI
+ID102S2V40,CD6NUM,O,Réel,"Format : ###,N
+Min = 50.0
+Max = 220.0
+Unité = mmHg",Systolic pressure
+ID102S2V42,CD7NUM,O,Réel,"Format : ###,N
+Min = 30.0
+Max = 160.0
+Unité = mmHg",Diastolic pressure
+ID102S2V43,CD8YN,O,Radio buttons,"1 = Yes 
+0 = No",Hypertension
+ID102S2V44,CD8AYN,O,Radio buttons,"1 = Yes 
+0 = No",Blood pressure treatment
+ID102S2V45,MH1YN,O,Radio buttons,"1 = Yes 
+0 = No",Diabetes
+ID102S2V46,MH1ANUM,O,Entier,"Taille : 2
+Max = 99
+Unité = y",Diabetes age
+ID102S2V47,MH2YN,O,Radio buttons,"1 = Yes 
+0 = No",Smoking
+ID102S2V48,MH2ANUM,O,Entier,"Taille : N
+Max = 200",Packets-year
+ID102S2V216,MH23NUM,O,Entier,"Taille : 2
+Max = 5",Cigarettes per day
+ID102S2V49,MH2BLS,O,Radio buttons,"1 = Regular (1cig/day/past 12 M) 
+2 = Former smoker >100 cig lifetime smoke-free since > 12 M 
+3 = Non-smoker <100 cig lifetime smoke-free since > 12 M",Smoking status*
+ID102S2V50,MH3YN,O,Radio buttons,"1 = Yes 
+0 = No",Alcohol use*
+ID102S2V51,MH3ANUM,O,Entier,"Taille : 2
+Max = 99",Alcool glasses/Week*
+ID102S2V53,MH4YN,O,Radio buttons,"1 = Yes 
+0 = No",Exercising*
+ID102S2V52,MH4ANUM,O,Entier,"Taille : 1
+Max = 9",Exr_NrT/Week*
+ID102S2V54,MH5YN,O,Radio buttons,"1 = Yes 
+0 = No",Cardiovascular disease
+ID102S2V55,MH5AYN,O,Radio buttons,"1 = Yes 
+0 = No",MI / ACS
+ID102S2V56,MH5A1NUM,O,Entier,"Taille : 2
+Max = 99",MI_Age
+ID102S2V57,MH5BYN,O,Radio buttons,"1 = Yes 
+0 = No",PTCA
+ID102S2V58,MH5B1NUM,O,Entier,"Taille : 2
+Max = 120",PTCA  Age
+ID102S2V59,MH5CYN,O,Radio buttons,"1 = Yes 
+0 = No",CABG
+ID102S2V60,MH5C1NUM,O,Entier,"Taille : 2
+Max = 120",CABG  Age
+ID102S2V61,MH5DYN,O,Radio buttons,"1 = Yes 
+0 = No",Stroke/TIA
+ID102S2V62,MH5D1NUM,O,Entier,"Taille : 2
+Max = 120",Stroke/TIA Age
+ID102S2V63,MH5EYN,O,Radio buttons,"1 = Yes 
+0 = No",Ischemic stroke*
+ID102S2V64,MH5E1NUM,O,Entier,"Taille : 2
+Max = 120",Ischemic stroke age*
+ID102S2V65,MH5FYN,O,Radio buttons,"1 = Yes 
+0 = No",Hemorragic stroke*
+ID102S2V66,MH5F1NUM,O,Entier,"Taille : 2
+Max = 120",Hemorragic stroke age*
+ID102S2V67,MH5GYN,O,Radio buttons,"1 = Yes 
+0 = No",other revascularization*
+ID102S2V68,MH5HYN,O,Radio buttons,"1 = Yes 
+0 = No",Ischemic disease of the lower limbs*
+ID102S2V69,MH16H1NUM,O,Entier,"Taille : 2
+Max = 120",Ischemic disease of the lower limbs age*
+ID102S2V71,MH16IYN,O,Radio buttons,"1 = Yes 
+0 = No",Peripheral arterial bypass*
+ID102S2V72,MH16I1NUM,O,Entier,"Taille : 2
+Max = 120",Peripheral arterial bypass age*
+ID102S2V73,MH16JYN,O,Radio buttons,"1 = Yes 
+0 = No",Carotid endarterectomy*
+ID102S2V74,MH16J1NUM,O,Entier,"Taille : 2
+Max = 120",Carotid endarterectomy age*
+ID102S2V76,MH16KYN,O,Radio buttons,"1 = Yes 
+0 = No",Ascending aorta intervention*
+ID102S2V75,MH16K1NUM,O,Entier,"Taille : 2
+Max = 120",Ascending aorta intervention age*
+ID102S2V77,MH16LYN,O,Radio buttons,"1 = Yes 
+0 = No",Aortic valve replacement*
+ID102S2V78,MH16L1NUM,O,Entier,"Taille : 2
+Max = 120",Aortic valve replacement age*
+ID102S2V79,FH1NUM,O,Entier,"Taille : 2
+Max = 200",Age at diagnosis of FH
+ID102S2V80,FH2DT,O,Date,"Précision = YYYY
+Valeurs par défaut = 01/01/---- 
+Min = Variable : BRTHDAT
+Max = Variable : RFICDAT",Year of first statin initiation
+ID102S2V81,FH3YN,O,Radio buttons,"1 = Maternal 
+2 = Paternal 
+3 = Unknown",Maternal / Parternal inheritance
+ID102S2V82,FH4YN,O,Radio buttons,"1 = Yes 
+0 = No",Tendon xanthoma
+ID102S2V83,FH5YN,O,Radio buttons,"1 = Yes 
+0 = No",Xanthelasma
+ID102S2V84,FH6YN,O,Radio buttons,"1 = Yes 
+0 = No",Corneal arcus
+ID102S2V85,FH7YN,O,Radio buttons,"1 = Yes 
+0 = No",Family history of hypercholesterolemia
+ID102S2V86,FH7ALS,O,Cases à cocher,"1 = Mother 
+2 = Father 
+3 = child 
+4 = sibling 
+5 = paternal grand-parent 
+6 = maternal grand-parent 
+7 = grand child 
+8 = paternal great grandparent 
+9 = maternal great grandparent 
+10 = uncle 
+11 = aunt 
+12 = cousin 
+13 = niece 
+14 = nephew",If yes: specify
+ID102S2V87,FH8YN,O,Radio buttons,"1 = Yes 
+0 = No",Family history of xanthoma
+ID102S2V88,FH9YN,O,Radio buttons,"1 = Yes 
+0 = No",Family history of CVD
+ID102S2V89,TAB_FH,O,Tableau,"Colonnes : 
+Relationship ( TABFH1LS ) 
+specify ( TABFH1ATXT ) 
+Type of event ( TABFH2LS ) 
+Age ( TABFH3NUM )",Family cardiovascular events
+ID102S2V90,TABFH1LS,O,Combo box,"1 = Mother 
+2 = Father 
+3 = child 
+4 = sibling 
+5 = paternal grand-parent 
+6 = maternal grand-parent 
+7 = grand child 
+8 = paternal great grandparent 
+9 = maternal great grandparent 
+10 = uncle 
+11 = aunt 
+12 = cousin 
+13 = niece 
+14 = nephew 
+15 = Other",Relationship
+ID102S2V202,TABFH1ATXT,O,Texte,Taille : N,Specify
+ID102S2V91,TABFH2LS,O,Combo box,"1 = MI 
+2 = angina 
+3 = stroke 
+4 = sudden death 
+5 = valvular sclerosis 
+6 = ND",Type of event
+ID102S2V92,TABFH3NUM,O,Entier,"Taille : 2
+Max = 120",Age
+ID102S2V93,FH10NUM,O,Entier,"Taille : N
+Max = 18",DLNC score
+ID102S2V94,BS1YN,O,Radio buttons,"1 = Yes 
+0 = No",Other biocollection available excluding DNA
+ID102S2V95,BS1ALS,O,Cases à cocher,"1 = proteomics 
+2 = lipidomics 
+3 = RNA 
+4 = etc","If yes, type of biocollection"
+ID102S2V96,BS1A1TXT,O,Texte,Taille : N,"If etc., specify"
+ID102S2V97,BS3NUM,O,Réel,"Format : ##,##
+Min = 0.0
+Max = 99.0",TCHOL1
+ID102S2V217,BS3UNIT,O,Combo box,"1 = mmol/L 
+2 = mg/dL",TCHOL1 unit
+ID102S2V98,BS4NUM,O,Réel,"Format : ##,##
+Min = 0.0
+Max = 99.0",TAG1
+ID102S2V218,BS4UNIT,O,Combo box,"1 = mmol/L 
+2 = mg/dL",TAG1 unit
+ID102S2V99,BS5NUM,O,Réel,"Format : ##,##
+Min = 0.0
+Max = 99.0",HDLC1
+ID102S2V219,BS5UNIT,O,Combo box,"1 = mmol/L 
+2 = mg/dL",HDLC1 Unit
+ID102S2V100,BS6NUM,O,Réel,"Format : ##,##
+Min = 0.0
+Max = 99.0",LDLC1
+ID102S2V220,BS6UNIT,O,Combo box,"1 = mmol/L 
+2 = mg/dL",LDLC1 unit
+ID102S2V101,BS7NUM,O,Réel,"Format : ####,N
+Min = 0.0
+Max = 9999.0",APOA1
+ID102S2V221,BS7UNIT,O,Combo box,"1 = mg/dL 
+2 = g/L",APOA1 unit
+ID102S2V105,BS8NUM,O,Réel,"Format : ####,N
+Min = 0.0
+Max = 9999.0",APOB
+ID102S2V222,BS8UNIT,O,Combo box,"1 = mg/dL 
+2 = g/L",APOB unit
+ID102S2V103,BS9NUM,O,Réel,"Format : ###,##
+Min = 0.0
+Max = 0.0",LP(a)1
+ID102S2V106,BS10LS,O,Combo box,"1 = nmol/L 
+2 = mg/dL",Lp(a)1 unit
+ID102S2V223,BS8YN,O,Radio buttons,"1 = Yes 
+0 = No",Lipid values under treatment available
+ID102S2V224,BS8ADT,O,Date,"Précision = JJ/MM/YYYY
+Valeurs par défaut = 01/01/---- 
+Min = Variable : BRTHDAT",Date
+ID102S2V107,BS11NUM,O,Réel,"Format : ##,##
+Min = 0.0
+Max = 99.0",TCHOL3
+ID102S2V225,BS11UNIT,O,Combo box,"1 = mmol/L 
+2 = mg/dL",TCHOL3 unit
+ID102S2V108,BS12NUM,O,Réel,"Format : ##,##
+Min = 0.0
+Max = 99.0",TAG3
+ID102S2V226,BS12UNIT,O,Combo box,"1 = mmol/L 
+2 = mg/dL",TAG3 unit
+ID102S2V109,BS13NUM,O,Réel,"Format : ##,##
+Min = 0.0
+Max = 99.0",HDLC3
+ID102S2V227,BS13UNIT,O,Combo box,"1 = mmol/L 
+2 = mg/dL",HDLC3 unit
+ID102S2V110,BS14NUM,O,Réel,"Format : ##,##
+Min = 0.0
+Max = 99.0",LDLC3
+ID102S2V228,BS14UNIT,O,Combo box,"1 = mmol/L 
+2 = mg/dL",LDLC3 unit
+ID102S2V111,BS15NUM,O,Réel,"Format : ####,N
+Min = 0.0
+Max = 9999.0",APOA1
+ID102S2V229,BS15UNIT,O,Combo box,"1 = mg/dL 
+2 = g/L",APOA1 unit
+ID102S2V112,BS16NUM,O,Réel,"Format : ####,N
+Min = 0.0
+Max = 9999.0",APOB
+ID102S2V230,BS16UNIT,O,Combo box,"1 = mg/dL 
+2 = g/L",APOB unit
+ID102S2V113,BS17NUM,O,Réel,"Format : ###,##
+Min = 0.0
+Max = 0.0",LP(a)3
+ID102S2V114,BS18LS,O,Combo box,"1 = nmol/L 
+2 = mg/dL",Lp(a)3 unit
+ID102S2V231,BS39LS,O,Cases à cocher,"00 = Statin 
+1 = ezetimibe 
+2 = cholestyramine 
+3 = niacin 
+4 = PCSK9-inhibitor 
+5 = Lomitapide 
+6 = Evinacumab 
+7 = LDL apheresis 
+8 = phytosterols 
+9 = red yeast rice",Treatment at the time of analysis
+ID102S2V232,BS39ALS,O,Combo box,"4 = 4 
+5 = 5 
+10 = 10 
+20 = 20 
+40 = 40 
+80 = 80","If Statin, daily dose (mg)"
+ID102S2V115,BS19NUM,O,Réel,"Format : ###,##
+Min = 100.0
+Max = 500.0
+Unité = µmol/L",Uric acid*
+ID102S2V116,BS20NUM,O,Réel,"Format : ##,#
+Min = 2.0
+Max = 10.0
+Unité = mmol/L",Fasting plasma glucose*
+ID102S2V117,BS21NUM,O,Réel,"Format : #,#
+Min = 4.0
+Max = 9.9
+Unité = %",HbA1c*
+ID102S2V118,BS22NUM,O,Réel,"Format : ###,N
+Min = 10.0
+Max = 150.0
+Unité = mmol/l",Creatinin*
+ID102S2V119,BS23NUM,O,Réel,"Format : ###,N
+Min = 15.0
+Max = 200.0
+Unité = ml/min/1.72m²",Glomerular filtration rate*
+ID102S2V120,BS24NUM,O,Réel,"Format : ####,N
+Min = 0.0
+Max = 9999.0
+Unité = UI/L",GOT*
+ID102S2V121,BS25NUM,O,Réel,"Format : ####,N
+Min = 0.0
+Max = 9999.0
+Unité = UI/L",GPT*
+ID102S2V122,BS26NUM,O,Réel,"Format : ####,N
+Min = 0.0
+Max = 9999.0
+Unité = UI/L",GGT*
+ID102S2V123,BS27NUM,O,Réel,"Format : ####,N
+Min = 0.0
+Max = 9999.0
+Unité = UI/L",ALP*
+ID102S2V124,BS28NUM,O,Réel,"Format : ###,N
+Min = 2.0
+Max = 500.0
+Unité = UI/L",Total bilirubin*
+ID102S2V125,BS29NUM,O,Réel,"Format : ####,N
+Min = 20.0
+Max = 5000.0
+Unité = UI/L",CPK*
+ID102S2V126,BS30YN,O,Radio buttons,"1 = Yes 
+0 = No",Molecular diagnosis
+ID102S2V127,BS30ADT,O,Date,"Précision = JJ/MM/YYYY
+Valeurs par défaut = 01/01/---- 
+Min = Variable : BRTHDAT
+Max = Date courante",Molecular diagnosis (date)
+ID102S2V128,BS30BLS,O,Cases à cocher,"1 = LDLR 
+2 = whole APOB 
+3 = APOB ""3527"" containing region 
+4 = PCSK9 
+5 = whole APOE 
+6 = APOE genotypes 
+7 = ABCG5 
+8 = ABCG8 
+9 = LIPA 
+10 = LDLRAP1",Genes analysed
+ID102S2V130,TAB_BS,O,Tableau,"Colonnes : 
+Variants identified (Gene refseq) ( TABBS1LS ) 
+cDNA ( TABBS2TXT ) 
+Protein ( TABBS3TXT ) 
+Guidelines used for the classification ( TABBS5TXT ) 
+Date of variant classification ( TABBS6DT ) 
+ACMG classification ( TABBS4LS )",Gene refseq
+ID102S2V131,TABBS1LS,O,Combo box,"1 = LDLR NM_000527.5 
+2 = APOB NM_000384.3 
+3 = APOE NM_000041.4 
+4 = PCSK9 NM_174936.4 
+5 = ABCG5 NM_022436.3 
+6 = ABCG8 NM_022437.3 
+7 = LDLRAP1 NM_015627.3 
+8 = LIPA NM_000235.4",Variants identified (Gene refseq)
+ID102S2V132,TABBS2TXT,O,Texte,Taille : N,cDNA
+ID102S2V133,TABBS3TXT,O,Texte,Taille : N,Protein
+ID102S2V233,TABBS5TXT,O,Texte,Taille : N,Guidelines used for the classification
+ID102S2V234,TABBS6DT,O,Date,"Précision = JJ/MM/YYYY
+Valeurs par défaut = 01/01/---- 
+Min = Variable : BRTHDAT
+Max = Date courante",Date of variant classification
+ID102S2V134,TABBS4LS,O,Radio buttons,"1 = Benign 
+2 = Likely Benign 
+3 = VUS 
+4 = Likely pathogenic 
+5 = Pathogenic",ACMG classification
+ID102S2V129,BS30CLS,O,Radio buttons,"1 = Targeted panel 
+2 = exome 
+3 = genome",Method
+ID102S2V135,BS34YN,O,Radio buttons,"1 = Yes 
+0 = No",Gene score calculation
+ID102S2V136,BS34ALS,O,Radio buttons,"1 = G6 (Talmud) 
+2 = G12 (Talmud) 
+3 = Other",If yes: type of gene score
+ID102S2V137,BS34A1TXT,O,Texte,Taille : N,"If Other, describe"
+ID102S2V235,BS34CNUM,O,Entier,"Taille : 3
+Max = 100
+Unité = %",Hypercholesterolemia Polygenic index calculation
+ID102S2V138,BS34BNUM,O,Réel,"Format : ##,##
+Min = 0.0
+Max = 99.0",If yes: value
+ID102S2V139,BS35YN,O,Radio buttons,"1 = Yes 
+0 = No",Other molecular test (mRNAseq)*
+ID102S2V140,BS35A1TXT,O,Texte,Taille : N,If yes: cell type*
+ID102S2V141,BS36YN,O,Radio buttons,"1 = Yes 
+0 = No",Coronary  Artery  Calcium Score*
+ID102S2V142,BS36ADT,O,Date,"Précision = JJ/MM/YYYY
+Valeurs par défaut = 01/01/---- 
+Max = Date courante",Coronary  Artery  Calcium Score (date)*
+ID102S2V143,BS36BNUM,O,Réel,"Format : ####,#
+Min = 0.0
+Max = 4000.0
+Unité = Agatston",Coronary Artery Calcium Score*
+ID102S2V144,BS36CNUM,O,Entier,"Taille : N
+Min = 1
+Max = 3",Coronary artery calcium score Number of affected artery/ies*
+ID102S2V145,BS37YN,O,Radio buttons,"1 = Yes 
+0 = No",Computed Coronary Tomography Angiography*
+ID102S2V147,BS37ADT,O,Date,"Précision = JJ/MM/YYYY
+Valeurs par défaut = 01/01/---- 
+Max = Date courante",Computed Coronary Tomography Angiography (date)*
+ID102S2V148,BS37BLS,O,Radio buttons,"1 = Normal 
+0 = No 
+2 = Atheromatosis without stenosis 
+3 = ND",Computed Coronary Tomography Angiography*
+ID102S2V149,BS37CNUM,O,Réel,"Format : ###,N
+Min = 0.0
+Max = 100.0
+Unité = %",Computed Coronary Tomography Angiography (arterial stenosis Max % of stenosis)*
+ID102S2V150,BS37DNUM,O,Réel,"Format : #,N
+Min = 0.0
+Max = 3.0",Computed Coronary Tomography Angiography Number of affected artery/ies*
+ID102S2V151,BS38YN,O,Radio buttons,"1 = Yes 
+0 = No",Cardiac Ultrasound*
+ID102S2V152,BS38ADT,O,Date,"Précision = JJ/MM/YYYY
+Valeurs par défaut = 01/01/---- 
+Max = Date courante",Cardiac ultrasound (date)*
+ID102S2V153,BS38BLS,O,Radio buttons,"1 = narrowing-insufficiency 
+2 = regurgitation 
+3 = Systolic LV Dysfunction 
+4 = Not Defined 
+5 = Normal",Cardiac ultrasound (Normal; Mitral valve)*
+ID102S2V154,BS38CNUM,O,Réel,"Format : ###,###
+Unité = mm",CIMT (Carotid Intima Media Thickness) Right (mm)*
+ID102S2V155,BS38DNUM,O,Réel,"Format : ###,###
+Unité = mm",CIMT (Carotid Intima Media Thickness) Left (mm)*
+ID102S2V156,BS38ENUM,O,Réel,"Format : ###,N
+Min = 1.0
+Max = 100.0
+Unité = %",Carotid Stenosi*
+ID102S2V157,BS38FNUM,O,Réel,"Format : ###,N
+Min = 1.0
+Max = 100.0
+Unité = %",Peripheral Artery Stenosis*
+ID102S2V158,TTT1YN,O,Radio buttons,"1 = Yes 
+0 = No",Lipid-lowering treatment
+ID102S2V159,TTT2YN,O,Radio buttons,"1 = Yes 
+0 = No",Statin
+ID102S2V160,TTT2ALS,O,Combo box,"1 = Simvastatin 
+2 = Atorvastatin 
+3 = Pravastatin 
+4 = Fluvastatin 
+5 = Rosuvastatin 
+6 = Pitavastatin",If yes: Molecule
+ID102S2V161,TTT2BLS,O,Radio buttons,"4 = 4 
+5 = 5 
+10 = 10 
+20 = 20 
+40 = 40 
+80 = 80",Daily dose (mg)
+ID102S2V174,TTT2CNUM,O,Entier,"Taille : 2
+Min = 18
+Max = 99",Age at start of statin (n)
+ID102S2V163,TTT2DLS,,Combo box,"1 = ND 
+2 = muscle intolerance 
+3 = pregnancy 
+4 = patient refusal 
+5 = non-compliance 
+6 = liver enzymes>3ULN 
+7 = liver enzymes < 3ULN 
+8 = doctor refusal 
+9 = no indication",If no Statin: reason for not taking statin*
+ID102S2V164,TTT3LS,O,Cases à cocher,"1 = ezetimibe 
+2 = cholestyramine 
+3 = niacin 
+4 = PCSK9-inhibitor 
+5 = Lomitapide 
+6 = Evinacumab 
+7 = LDL apheresis 
+8 = phytosterols 
+9 = red yeast rice",Other lipid-lowering drugs
+ID102S2V165,TTT4LS,,Cases à cocher,"1 = antiplatelet 
+2 = nitrates 
+3 = anticoagulant 
+4 = beta-blocker 
+5 = diuretic 
+6 = caclium channel blocker 
+7 = ACE-I/ARB",Other treatments*
+ID102S2V166,VS1YN,O,Radio buttons,"1 = Yes 
+0 = No",Death*
+ID102S2V167,VS1ALS,O,Combo box,"1 = MI 
+2 = stroke 
+3 = heart failure 
+4 = other cardiac-related cause 
+5 = malignancy 
+6 = accident 
+7 = other cause",Cause of death:*
+ID102S2V168,VS1BTXT,O,Texte,Taille : N,"If Other cause, describe*"
+ID102S2V17,MEPDT,O,Date,"Précision = JJ/MM/YYYY
+Valeurs par défaut = 01/01/----",Date de mise en production
+ID102S2V26,NINOPLUD1MDT,O,Date,"Précision = JJ/MM/YYYY
+Valeurs par défaut = 01/01/----",Date d'envoie du nino plus 1 mois
+ID102S2V171,DATA_CI,O,Radio buttons,"1 = Yes 
+0 = No",Tous les critères d'inclusions sont à oui.
+ID102S2V199,DATA_CNI,O,Radio buttons,"1 = Yes 
+0 = No",Tous les critères de non-inclusions sont à Non.
+ID102S2V172,DATA_DT1,O,Date,"Précision = JJ/MM/YYYY
+Valeurs par défaut = 01/01/----",Calcul de la date de début de la prise des statines
+ID102S2V173,DATA_NUM2,O,Entier,Taille : 2,Age de début de statine négativé
+ID102S2V183,RFINSTMOINS1MOISDT,O,Date,"Précision = JJ/MM/YYYY
+Valeurs par défaut = 01/01/----",Date d'inclusion moins 1 mois
+ID102S2V203,DATA_INCLDT,O,Date,"Précision = JJ/MM/YYYY
+Valeurs par défaut = 01/01/----",Date d'inclusion système
