@@ -31,10 +31,12 @@ def create_dictionary_export_map(dictionary_df, export_tables):
 
     export_col_fields = [f"{name}_export_cols" for name in export_tables]
 
-    result["n_export_matches"] = result[export_col_fields].apply(
-        lambda row: sum(len(x) for x in row),
+    result["all_export_matches"] = result[export_col_fields].apply(
+        lambda row: [col for matches in row for col in matches],
         axis=1
     )
+
+    result["n_export_matches"] = result["all_export_matches"].apply(len)
 
     result["has_export_match"] = result["n_export_matches"] > 0
 
@@ -131,21 +133,6 @@ def parse_sas_informats(sas_path):
         col: informat.strip()
         for col, informat in matches
     }
-
-def create_export_column_catalog(export_tables, sas_labels):
-    rows = []
-
-    for table_name, table_df in export_tables.items():
-        labels = sas_labels.get(table_name, {})
-
-        for col in table_df.columns:
-            rows.append({
-                "table": table_name,
-                "column": col,
-                "sas_label": labels.get(col)
-            })
-
-    return pd.DataFrame(rows)
 
 
 def create_export_column_catalog(export_tables, sas_labels, sas_informats):
