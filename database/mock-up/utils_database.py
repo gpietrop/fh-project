@@ -191,3 +191,66 @@ def create_master_column_catalog(column_catalog, dictionary_df):
     )
 
     return result
+
+
+def create_table_dataset(table_df, table_name, master_catalog):
+    catalog = master_catalog[master_catalog["table"] == table_name].copy()
+
+    usable_types = ["numeric", "categorical", "checkbox", "date", "text"]
+
+    keep_cols = catalog[
+        catalog["Type_english"].isin(usable_types)
+    ]["column"].tolist()
+
+    id_cols = [
+        c for c in ["STUDY_ID", "COUNTRY_ID", "SITE_ID", "SUBJECT_ID", "SUBJECT_REF"]
+        if c in table_df.columns
+    ]
+
+    final_cols = id_cols + [c for c in keep_cols if c not in id_cols]
+
+    return table_df[final_cols].copy()
+
+
+def get_numeric_cols(master_catalog, table_name):
+    catalog = master_catalog[master_catalog["table"] == table_name].copy()
+    numeric_catalog = catalog[catalog["Type_english"] == "numeric"]
+
+    preferred_cols = []
+
+    for ref in numeric_catalog["Référence"].unique():
+        ref_rows = numeric_catalog[numeric_catalog["Référence"] == ref]
+
+        v_cols = [c for c in ref_rows["column"]if c.endswith("_V")]
+
+        if len(v_cols) > 0:
+            preferred_cols.extend(v_cols)
+        else:
+            base_cols = [c for c in ref_rows["column"] if not c.endswith("_V")]
+            preferred_cols.extend(base_cols)
+
+    return preferred_cols
+
+
+def get_categorical_cols(master_catalog, table_name):
+    catalog = master_catalog[master_catalog["table"] == table_name].copy()
+
+    return catalog[catalog["Type_english"] == "categorical"]["column"].tolist()
+
+
+def get_checkbox_cols(master_catalog, table_name):
+    catalog = master_catalog[master_catalog["table"] == table_name].copy()
+
+    return catalog[catalog["Type_english"] == "checkbox"]["column"].tolist()
+
+def get_date_cols(master_catalog, table_name):
+    catalog = master_catalog[master_catalog["table"] == table_name].copy()
+
+    date_cols = catalog[catalog["Type_english"] == "date"]["column"].tolist()
+
+    return [c for c in date_cols if not c.endswith(("_D", "_M", "_Y"))]
+
+def get_text_cols(master_catalog, table_name):
+    catalog = master_catalog[master_catalog["table"] == table_name].copy()
+
+    return catalog[catalog["Type_english"] == "text"]["column"].tolist()
