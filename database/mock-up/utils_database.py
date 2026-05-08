@@ -254,3 +254,24 @@ def get_text_cols(master_catalog, table_name):
     catalog = master_catalog[master_catalog["table"] == table_name].copy()
 
     return catalog[catalog["Type_english"] == "text"]["column"].tolist()
+
+
+def summarize_table_features(master_catalog, table_name):
+    return {
+        "numeric": get_numeric_cols(master_catalog, table_name),
+        "categorical": get_categorical_cols(master_catalog, table_name),
+        "checkbox": get_checkbox_cols(master_catalog, table_name),
+        "date": get_date_cols(master_catalog, table_name),
+        "text": get_text_cols(master_catalog, table_name),
+    }
+
+
+def create_ml_table_dataset(table_df, master_catalog, table_name):
+    features = summarize_table_features(master_catalog, table_name)
+
+    id_cols = [c for c in ["STUDY_ID", "COUNTRY_ID", "SITE_ID", "SUBJECT_ID", "SUBJECT_REF"] if c in table_df.columns]
+
+    feature_cols = (features["numeric"] + features["categorical"] + features["checkbox"] + features["date"] + features["text"])
+    final_cols = id_cols + [c for c in feature_cols if c in table_df.columns and c not in id_cols]
+
+    return table_df[final_cols].copy()
